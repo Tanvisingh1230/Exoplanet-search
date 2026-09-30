@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Error</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Something Went Wrong</h1>
+
+        <div class="form-card">
+
+            <h2>Error</h2>
+
+            <p>{{ e }}</p>
+
+            <button onclick="window.history.back()">
+                Go Back
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <script>
+
+        alert("{{ e }}");
+
+    </script>
+
+</body>
+
+</html>

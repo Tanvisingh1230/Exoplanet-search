@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Exoplanet Results</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Exoplanet Results</h1>
+
+        <div class="form-card">
+
+            <div class="table-wrapper">
+
+                <table>
+
+                    <tr>
+
+                        <th>Planet Name</th>
+                        <th>Mass</th>
+                        <th>Radius</th>
+                        <th>Mass Earth</th>
+                        <th>Radius Earth</th>
+                        <th>Number of Planets</th>
+                        <th>Number of Stars</th>
+
+                    </tr>
+
+
+                    {% for i in data.values %}
+
+                    <tr>
+
+                        <td>{{ i[0] }}</td>
+                        <td>{{ i[1] }}</td>
+                        <td>{{ i[2] }}</td>
+                        <td>{{ i[3] }}</td>
+                        <td>{{ i[4] }}</td>
+                        <td>{{ i[5] }}</td>
+                        <td>{{ i[6] }}</td>
+
+                    </tr>
+
+                    {% endfor %}
+
+                </table>
+
+            </div>
+
+        </div>
+
+
+        <a href="/" class="back-button">
+
+            Go Back
+
+        </a>
+
+
+    </div>
+
+</body>
+
+</html>

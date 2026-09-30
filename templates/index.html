@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Exoplanet Explorer</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Exoplanet Explorer</h1>
+
+        <div class="form-card">
+
+            <form action="/results" method="GET">
+
+                <div class="form-group">
+
+                    <label for="planet_name">Planet Name</label>
+
+                    <select name="planet_name" id="planet_name">
+
+                        <option value="">All Planets</option>
+
+                        {% for planet in planet_names %}
+
+                            <option value="{{ planet }}">
+                                {{ planet }}
+                            </option>
+
+                        {% endfor %}
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="number_of_planets">Number of Planets</label>
+
+                    <select name="number_of_planets" id="number_of_planets">
+
+                        <option value="">All</option>
+
+                        {% for number in number_of_planets %}
+
+                            <option value="{{ number }}">
+                                {{ number }}
+                            </option>
+
+                        {% endfor %}
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="number_of_stars">Number of Stars</label>
+
+                    <select name="number_of_stars" id="number_of_stars">
+
+                        <option value="">All</option>
+
+                        {% for star in number_of_stars %}
+
+                            <option value="{{ star }}">
+                                {{ star }}
+                            </option>
+
+                        {% endfor %}
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>Select Output</label>
+
+                    <div class="radio-group">
+
+                        <label>
+
+                            <input type="radio" name="output" value="table" checked>
+
+                            Show Table
+
+                        </label>
+
+
+                        <label>
+
+                            <input type="radio" name="output" value="charts">
+
+                            Show Visualizations
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <button type="submit">
+                    Explore
+                </button>
+
+            </form>
+
+        </div>
+
+
+        <!-- Statistics -->
+
+        <div class="form-card statistics-card">
+
+            <h2>Planet Statistics</h2>
+
+            <p>Find Mean, Median and Mode of the planets.</p>
+
+            <a href="/statistics" class="statistics-button">
+                View Statistics
+            </a>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

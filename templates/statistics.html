@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Planet Statistics</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <a href="/" class="back-button">
+            Go Back
+        </a>
+
+        <h1>Planet Statistics</h1>
+
+
+        <div class="form-card">
+
+            <h2>Mass Earth</h2>
+
+            <p>Mean: {{ mass_mean }}</p>
+
+            <p>Median: {{ mass_median }}</p>
+
+            <p>Mode: {{ mass_mode }}</p>
+
+        </div>
+
+
+        <div class="form-card">
+
+            <h2>Radius Earth</h2>
+
+            <p>Mean: {{ radius_mean }}</p>
+
+            <p>Median: {{ radius_median }}</p>
+
+            <p>Mode: {{ radius_mode }}</p>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

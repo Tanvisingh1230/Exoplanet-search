@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Exoplanet Visualizations</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <a href="/" class="back-button">
+            Go Back
+        </a>
+
+        <h1>Exoplanet Visualizations</h1>
+
+
+        <div class="form-card">
+
+            <h2>Planet Radius Distribution</h2>
+
+            <img src="{{ url_for('static', filename='radius.png') }}">
+
+        </div>
+
+
+        <div class="form-card">
+
+            <h2>Planet Mass Distribution</h2>
+
+            <img src="{{ url_for('static', filename='mass.png') }}">
+
+        </div>
+
+
+        <div class="form-card">
+
+            <h2>Number of Planets</h2>
+
+            <img src="{{ url_for('static', filename='planets.png') }}">
+
+        </div>
+
+
+        <div class="form-card">
+
+            <h2>Number of Stars</h2>
+
+            <img src="{{ url_for('static', filename='stars.png') }}">
+
+        </div>
+
+
+        <div class="form-card">
+
+            <h2>Planet Mass vs Planet Radius</h2>
+
+            <img src="{{ url_for('static', filename='mass_radius.png') }}">
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
